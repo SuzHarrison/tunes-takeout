@@ -24,7 +24,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'rspotify'
 gem 'yelp', require: 'yelp'
 gem 'httparty'
-gem 'pry-rails'
+gem 'omniauth'
+#gem 'omniauth-oauth2', '~> 1.3.1'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -38,13 +39,22 @@ gem 'pry-rails'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-rails'
   gem 'simplecov', '~> 0.11.2'
+  gem 'minitest-vcr'
+  gem 'minitest-reporters'
+  gem 'webmock'
+  gem 'dotenv-rails'
+
 end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'bootstrap-sass', '~>3.2.0'
+  gem "better_errors"
+  gem 'rails-erd'
+  gem 'autoprefixer-rails'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
+  #gem 'spring'
 end

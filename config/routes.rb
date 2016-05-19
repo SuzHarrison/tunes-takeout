@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get "/auth/:provider/callback" => "sessions#create"
 
   post '/suggestions' => "suggestions#search_term", as: :search_term
+  delete "/logout" => "sessions#destroy"
 
 
   # resources :sessions, :only => [:create]

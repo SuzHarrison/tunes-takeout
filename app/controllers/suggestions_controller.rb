@@ -5,13 +5,12 @@ BEST_PAIRINGS = 20
 
   def search_term
     @results = Charles::CharlesTunesTakeout.find_suggestions(params[:search_request])
-      if @results == nil
-        flash[:no_results] = "Sorry we have no results for this search."
-        render :new
-  end
-      else
-        return @results
-      end
+      # if @suggestions == nil
+      #   flash[:no_results] = "Sorry we have no results for this search."
+      #   redirect_to root_path
+      # else
+      #   return @results
+      # end
   end
   #
   # def display_results

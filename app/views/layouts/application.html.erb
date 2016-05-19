@@ -9,15 +9,15 @@
 </head>
 <body>
   <main class="container">
-    <%#= "Hi #{ current_user.name }!" if current_user %>
+    <%= "Hi #{ current_user.name }!" if current_user %>
     <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to 'Sign in with Spotify', '/auth/spotify' %></li>
-        <li><%#= link_to "Log Out", logout_path, method: :delete %></li>
+        <li><%= link_to 'Sign in with Spotify', '/auth/spotify' unless current_user %></li>
+        <li><%= link_to "Log Out", logout_path, method: :delete if current_user %></li>
       </ul>
     </nav>
-<%= yield %>
-</main>
+    <%= yield %>
+  </main>
 </body>
 </html>

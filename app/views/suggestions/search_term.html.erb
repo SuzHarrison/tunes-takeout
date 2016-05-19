@@ -1,3 +1,9 @@
 <% @results.suggestions.map do |result_hash| %>
-  <%= result_hash["food_id"] %><br>
+  <% music = Music.new.find_music(result_hash["music_id"], result_hash["music_type"]) %>
+  <%# client = Food.new.find_food(result_hash["food_id"]) %> <br>
+  <%= music.find_name %>:
+  <%= image_tag music.find_thumbnail %>
+  <%#= client.business(result_hash["food_id"])%>
+
+  <%= result_hash["food_id"]%>
 <% end %>

@@ -3,6 +3,7 @@ require 'httparty'
 module Charles
  class CharlesTunesTakeout
    BASE_URL = "https://tunes-takeout-api.herokuapp.com/v1/suggestions/search?query="
+
    attr_reader :suggestions
 
    def initialize(data)

@@ -10,7 +10,7 @@
 <body>
   <main class="container">
     <% if current_user %>
-      <%#= image_tag user.photo_url %>
+      <%= image_tag current_user.profile_url %>
       <%= "Hi #{ current_user.name }!" %>
     <% end %>
     <nav class="navbar navbar-default">

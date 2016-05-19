@@ -39,4 +39,8 @@ attr_reader :music_suggestion
   def find_name
       music_suggestion.name
   end
+
+  def open_url
+    music_suggestion.external_urls
+  end
 end

@@ -1,9 +1,24 @@
 <% @results.map do |result_hash| %>
-  <% music = Music.new.find_music(result_hash["music_id"], result_hash["music_type"]) %>
-  <% client = Food.find_food(result_hash["food_id"]) %> <br>
-  <%= music.find_name %>:
-  <%= image_tag music.find_thumbnail %>
-  <%= client.name %>
-
-  <%= result_hash["food_id"]%>
+<div class="panel panel-primary">
+  <!-- Default panel contents -->
+    <table class= "table">
+      <% music = Music.new.find_music(result_hash["music_id"], result_hash["music_type"]) %>
+      <% uri = Addressable::URI.parse(result_hash["food_id"]) %>
+      <% food_suggestion = Food.find_food(uri.normalize.to_s) %> <br>
+      <tr>
+        <td>
+          <%= image_tag music.find_thumbnail %>
+          <%= music.find_name %>:<br>
+          <%= link_to "Listen!", music.open_url["spotify"] %>
+        </td>
+        <td>
+          <%= food_suggestion.name %>
+          <%= food_suggestion.phone %>
+          <%= link_to "View full info on YELP!", food_suggestion.url %>
+          <%= image_tag food_suggestion.image_url %>
+          <%= food_suggestion.rating %><%#= image_tag food_suggestion.rating_img_url %>
+        </td>
+      </tr>
+    </table>
+  </div>
 <% end %>

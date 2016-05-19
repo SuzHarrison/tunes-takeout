@@ -9,7 +9,10 @@
 </head>
 <body>
   <main class="container">
-    <%= "Hi #{ current_user.name }!" if current_user %>
+    <% if current_user %>
+      <%#= image_tag user.photo_url %>
+      <%= "Hi #{ current_user.name }!" %>
+    <% end %>
     <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path %></li>
@@ -17,6 +20,13 @@
         <li><%= link_to "Log Out", logout_path, method: :delete if current_user %></li>
       </ul>
     </nav>
+    <% if current_user %>
+      <%= form_tag({controller: "suggestions", action: "search_term", method: "post"}) do %>
+      <%= label_tag(:search_request, "Enter a search term:") %>
+      <%= text_field_tag(:search_request) %>
+      <%= submit_tag("Search") %>
+      <% end %>
+    <%end%>
     <%= yield %>
   </main>
 </body>

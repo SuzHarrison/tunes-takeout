@@ -18,6 +18,6 @@ BEST_PAIRINGS = 20
   # end
 
   # def index
-  #   @pairings = #CHARLESAPI.pairings.all.order(:rank).reverse.take(BEST_PAIRINGS)
+  #   @results = Charles::CharlesTunesTakeout.find_suggestions(params[:search_request]).order(:rank).reverse.take(BEST_PAIRINGS)
   # end
 end

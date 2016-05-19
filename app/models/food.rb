@@ -1,4 +1,4 @@
-# require: 'yelp'
+require: 'yelp'
 
 class Food
 attr_reader :food_suggestion
@@ -7,8 +7,16 @@ attr_reader :food_suggestion
     @food_suggestion = Yelp::Client.new
   end
 
-  def find_food_images
-      food_suggestion.images
+  def find_food(food_id)
+    @food_suggestion.business(food_id)
+  end
+
+  def business_name
+    find_food.name
+  end
+
+  def food_images
+    find_food.image_url
   end
   #
   # def find_thumbnail

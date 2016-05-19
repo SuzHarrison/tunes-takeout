@@ -1,3 +1,7 @@
 <h1>Welcome to Tunes and Takeout</h1>
 
-<%= TunesTakeoutWrapper.top_twenty %>
+<% TunesTakeoutWrapper.top_twenty.map do |one_top_sugg| %>
+  <% TunesTakeoutWrapper.search_by_id(one_top_sugg) %>
+
+
+<% end %>

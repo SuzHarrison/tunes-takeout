@@ -1,10 +1,10 @@
 class SuggestionsController < ApplicationController
-  require "#{Rails.root}/lib/Charles/TunesTakeoutWrapper.rb"
+  # require "#{Rails.root}/lib/Charles/TunesTakeoutWrapper.rb"
 
 BEST_PAIRINGS = 20
 
   def search_term
-    @results = Charles::CharlesTunesTakeout.find_suggestions(params[:search_request])
+    @results = TunesTakeoutWrapper.find_suggestions(params[:search_request])
       # if @suggestions == nil
       #   flash[:no_results] = "Sorry we have no results for this search."
       #   redirect_to root_path
@@ -12,6 +12,8 @@ BEST_PAIRINGS = 20
       #   return @results
       # end
   end
+
+
   #
   # def display_results
   #   @results =

@@ -1,18 +1,18 @@
 require 'httparty'
 
-module Charles
- class CharlesTunesTakeout
+module TunesTakeoutWrapper
+
    BASE_URL = "https://tunes-takeout-api.herokuapp.com/"
 
-   attr_reader :suggestions
+  #  attr_reader :suggestions
 
-   def initialize(data)
-     @suggestions = data["suggestions"]
-   end
+  #  def initialize(data)
+  #    @suggestions = data["suggestions"]
+  #  end
 
    def self.find_suggestions(term)
-    data = HTTParty.get(BASE_URL + "v1/suggestions/search?query=#{term}").parsed_response
-    return self.new(data)
+    data = HTTParty.get(BASE_URL + "v1/suggestions/search?query=#{term}").parsed_response["suggestions"]
+    return data
    end
 
    def self.top_twenty

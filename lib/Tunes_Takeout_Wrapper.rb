@@ -33,7 +33,7 @@ module TunesTakeoutWrapper
    def self.make_favorite(uid, suggestion_id)
      @response = HTTParty.post(BASE_URL + "v1/users/#{uid}/favorites", body: {
        "suggestion": suggestion_id
-       })
+     }.to_json, :headers => { 'Content-Type' => 'application/json' })
    end
 
    def self.unfavorite(uid, suggestion_id)

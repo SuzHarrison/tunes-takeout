@@ -17,16 +17,10 @@
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path %></li>
         <li><%= link_to 'Sign in with Spotify', '/auth/spotify' unless current_user %></li>
+        <li><%#= link_to "See My Favorites", users_favorites_path if current_user %></li>
         <li><%= link_to "Log Out", logout_path, method: :delete if current_user %></li>
       </ul>
     </nav>
-    <% if current_user %>
-      <%= form_tag({controller: "suggestions", action: "search_term", method: "post"}) do %>
-      <%= label_tag(:search_request, "Enter a search term:") %>
-      <%= text_field_tag(:search_request) %>
-      <%= submit_tag("Search") %>
-      <% end %>
-    <%end%>
     <%= yield %>
   </main>
 </body>

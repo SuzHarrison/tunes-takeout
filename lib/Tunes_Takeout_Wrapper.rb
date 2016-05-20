@@ -31,11 +31,18 @@ module TunesTakeoutWrapper
    end
 
    def self.make_favorite(uid, suggestion_id)
-     HTTParty.post(BASE_URL + "v1/users/#{uid}/favorites", body: {
+     @response = HTTParty.post(BASE_URL + "v1/users/#{uid}/favorites", body: {
+       "suggestion": suggestion_id
+       })
+   end
+
+   def self.unfavorite(uid, suggestion_id)
+     HTTParty.delete(BASE_URL + "v1/users/#{uid}/favorites", body: {
        "suggestion": "suggestion-id"
        })
      return status
    end
+
 
   #  private
    #

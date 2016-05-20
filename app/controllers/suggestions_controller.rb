@@ -12,16 +12,16 @@ class SuggestionsController < ApplicationController
   end
 
   def favorites(data)
-    @favorites = data.all
-
+    @favorites = TunesTakeoutWrapper.favorites_by_user(params[:favorite])
   end
 
-  def favorite(uid, suggestions_id)
+  def favorite
     # adds a suggestion into the favorite list for the signed-in User. This requires interaction with the Tunes & Takeout API.
-    @favorites = TunesTakeoutWrapper.(params [:favorite_hash])
+    @favorite = TunesTakeoutWrapper.make_favorite(params["current_user"], params["favorite"])
   end
 
   def unfavorite
     # removes a suggestion from the favorite list for the signed-in User. This requires interaction with the Tunes & Takeout API.
+    @favorite = TunesTakeoutWrapper.unfavorite(params[:favorite])
   end
 end

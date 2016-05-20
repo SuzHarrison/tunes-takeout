@@ -23,10 +23,13 @@
         <%= food_suggestion.rating %><%#= image_tag food_suggestion.rating_img_url %>
       </td>
 
+      <% if current_user %>
         <%= form_tag({controller: "suggestions", action: "favorite", method: "post"}) do %>
-        <%= hidden_field_tag "favorite_hash", 'suggestion_id' %>
+        <%= hidden_field_tag "favorite", pairing["id"] %>
+        <%= hidden_field_tag "current_user", current_user.uid %>
         <%= submit_tag("Add to favorites") %>
         <% end %>
+      <% end %>
     </tr>
   </table>
 </div>

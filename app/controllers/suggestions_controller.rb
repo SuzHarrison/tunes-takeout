@@ -11,18 +11,29 @@ class SuggestionsController < ApplicationController
       # end
   end
 
+  def index
+    if current_user
+      @favorites = TunesTakeoutWrapper.favorites_by_user(current_user.uid)
+    end
+  end
+
   def favorites
-    @favorites = TunesTakeoutWrapper.favorites_by_user(params["current_user"])
+    @favorites = TunesTakeoutWrapper.favorites_by_user(current_user.uid)
   end
 
   def favorite
     # adds a suggestion into the favorite list for the signed-in User. This requires interaction with the Tunes & Takeout API.
     @favorite = TunesTakeoutWrapper.make_favorite(params["current_user"], params["favorite"])
-    redirect_to root_path
+    redirect_to suggestions_favorites_path
   end
 
   def unfavorite
     # removes a suggestion from the favorite list for the signed-in User. This requires interaction with the Tunes & Takeout API.
-    @favorite = TunesTakeoutWrapper.unfavorite(params[:favorite])
+    @favorite = TunesTakeoutWrapper.not_favorite(params["current_user"], params["favorite"])
+    raise
+    redirect_to suggestions_favorites_path
   end
+
+
+
 end

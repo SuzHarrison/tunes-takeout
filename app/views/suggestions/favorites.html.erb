@@ -1,11 +1,8 @@
-
-
-
-<% @favorites.map do |fav| %>
+<% @favorites.map do |sugg| %>
   <div class="panel panel-primary">
       <!-- Default panel contents -->
     <table class= "table">
-    <% pairing = TunesTakeoutWrapper.search_by_id(fav) %>
+    <% pairing = TunesTakeoutWrapper.search_by_id(sugg) %>
     <% music = Music.new.find_music(pairing["music_id"], pairing["music_type"]) %>
     <% uri = Addressable::URI.parse(pairing["food_id"]) %>
     <% food_suggestion = Food.find_food(uri.normalize.to_s) %> <br>
@@ -23,13 +20,15 @@
         <%= food_suggestion.rating %><%#= image_tag food_suggestion.rating_img_url %>
       </td>
 
+      <td>
       <% if current_user %>
-        <%= form_tag({controller: "suggestions", action: "favorite", method: "post"}) do %>
+        <%= form_tag({controller: "suggestions", action: "unfavorite", method: "delete"}) do %>
         <%= hidden_field_tag "favorite", pairing["id"] %>
         <%= hidden_field_tag "current_user", current_user.uid %>
-        <%= submit_tag("Add to favorites") %>
+        <%= submit_tag("Unfavorite") %>
         <% end %>
       <% end %>
+      </td>
     </tr>
   </table>
   </div>

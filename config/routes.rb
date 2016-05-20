@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   post '/suggestions' => "suggestions#search_term", as: :search_term
   delete "/logout" => "sessions#destroy"
 
+  get '/users/favorites' => "suggestions#favorites"
+  post '/users/favorites' => "suggestions#favorite"
+
 
   # resources :sessions, :only => [:create]
   #get "/sign_in" => "sessions#new"

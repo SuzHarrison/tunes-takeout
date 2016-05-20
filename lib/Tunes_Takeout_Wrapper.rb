@@ -25,9 +25,18 @@ module TunesTakeoutWrapper
      return data
    end
 
-   def self.favorite_by_user(uid)
+   def self.favorites_by_user(uid)
      data = HTTParty.get(BASE_URL + "v1/users/#{uid}/favorites").parsed_response
+     return data
    end
+
+   def self.make_favorite(uid, suggestion_id)
+     HTTParty.post(BASE_URL + "v1/users/#{uid}/favorites", body: {
+       "suggestion": "suggestion-id"
+       })
+     return status
+   end
+
   #  private
    #
   #  def reject_null_sprites(sprite_hash)

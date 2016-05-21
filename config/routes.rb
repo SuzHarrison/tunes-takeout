@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   delete "/logout" => "sessions#destroy"
 
   get '/suggestions/favorites' => "suggestions#favorites"
-  post '/suggestions/favorite' => "suggestions#favorite"
-  delete '/suggestions/favorite' => "suggestions#unfavorite"
+  post '/suggestions/favorites' => "suggestions#favorite"
+  delete '/suggestions/favorites' => "suggestions#unfavorite"
   #get '/users/:user_id/favorites' => "suggestions#favorites", as: :user_favorites
   # post '/users/:user_id/favorites' => "suggestions#favorite"
 

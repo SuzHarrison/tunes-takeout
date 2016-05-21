@@ -7,6 +7,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
 <body>
   <main class="container">
     <% if current_user %>
@@ -24,6 +25,13 @@
         <li><%= link_to "Log Out", logout_path, method: :delete if current_user %></li>
       </ul>
     </nav>
+    <% if current_user %>
+       <%= form_tag({controller: "suggestions", action: "search_term", method: "post"}) do %>
+       <%= label_tag(:search_request, "Enter a search term:") %>
+       <%= text_field_tag(:search_request) %>
+       <%= submit_tag("Search") %>
+       <% end %>
+    <%end%>
     <%= yield %>
   </main>
 </body>

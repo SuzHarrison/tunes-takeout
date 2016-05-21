@@ -43,4 +43,8 @@ attr_reader :music_suggestion
   def open_url
     music_suggestion.external_urls
   end
+
+  def iframe
+    music_suggestion.uri
+  end
 end

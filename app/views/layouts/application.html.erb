@@ -12,6 +12,9 @@
     <% if current_user %>
       <%= image_tag current_user.profile_url %>
       <%= "Hi #{ current_user.name }!" %>
+    <% else %>
+      <img class="spotify-logo" src="https://petermolnar.eu/files/150x140-spotify-logos.png"></span>
+      <span class="greeting greeting-text"><%= "Welcome, Guest!" %></span>
     <% end %>
     <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">

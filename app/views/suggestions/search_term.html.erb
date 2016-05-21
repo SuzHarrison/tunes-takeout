@@ -12,6 +12,9 @@
           <%= link_to "Listen!", music.open_url["spotify"] %>
         </td>
         <td>
+          <iframe src="https://embed.spotify.com/?uri=<%= music.iframe %>" width="300" height="80" frameborder="0" allowtransparency="true" class="player"></iframe>
+        </td>
+        <td>
           <%= food_suggestion.name %>
           <%= food_suggestion.phone %>
           <%= link_to "View full info on YELP!", food_suggestion.url %>

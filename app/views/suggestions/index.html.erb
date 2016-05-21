@@ -26,10 +26,10 @@
         <%= food_suggestion.location %>
         <%= food_suggestion.rating %><%#= image_tag food_suggestion.rating_img_url %>
       </td>
-
+      <td>
       <% if current_user && @favorites.include?(pairing["id"]) %>
         <%= form_tag({controller: "suggestions", action: "unfavorite", method: "delete"}) do %>
-        <%= hidden_field_tag "favorite", pairing["id"] %>
+        <%= hidden_field_tag "unfavorite", pairing["id"] %>
         <%= hidden_field_tag "current_user", current_user.uid %>
         <%= submit_tag("Unfavorite") %>
         <% end %>
@@ -42,6 +42,7 @@
           <% end %>
         <% end %>
       <% end %>
+      </td>
     </tr>
   </table>
 </div>

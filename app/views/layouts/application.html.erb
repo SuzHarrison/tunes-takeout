@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <main class="container">
+  <main class="container-fluid">
     <% if current_user %>
       <%= image_tag current_user.profile_url %>
       <%= "Hi #{ current_user.name }!" %>
@@ -17,6 +17,8 @@
       <img class="spotify-logo" src="https://petermolnar.eu/files/150x140-spotify-logos.png">
       <span class="greeting greeting-text"><%= "Welcome, Guest!" %></span>
     <% end %>
+    <img class="img-rounded" src="http://payload.cargocollective.com/1/0/21463/1909566/harvest-food-and-music-festival-poster-b.png" width="400" height="250" >
+    <h1 class="welcome-title" >Welcome to Tunes and Takeout</h1>
     <nav class="navbar navbar-default">
       <ul class="nav navbar-nav">
         <li><%= link_to "Home", root_path %></li>

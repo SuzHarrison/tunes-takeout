@@ -11,6 +11,6 @@ known_user:
   name: "Suzanne Convertino Harrison"
 
 unknown_user:
-  provider: ""
-  uid: ""
-  name: ""
+  provider: "spotify"
+  uid: "dri19tcc"
+  name: "Adriana Cannon"

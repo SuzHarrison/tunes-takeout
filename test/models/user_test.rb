@@ -4,19 +4,19 @@ class UserTest < ActiveSupport::TestCase
   def setup
     # @known = OmniAuth.config.mock_auth[:spotify_known]
     @known = users(:known_user)
-    @auth_hash = {"info" => {"display_name" => "Suzanne Convertino Harrison", "uid" => "1226771573"}, "provider" => "spotify"}
+    @auth_hash = {"info" => {"display_name" => "Suzanne Convertino Harrison", "id" => "1226771573"}, "provider" => "spotify"}
+    @adriana_auth_hash = {"info" => {"display_name" => "Adriana Cannon", "id" => "dri19tcc"}, "provider" => "spotify"}
+    # @unknown = users(:unknown_user)
     # @unknown_with_uid = OmniAuth.config.mock_auth[:spotify_uid]
   end
 
-  test "can find an existing user given an oauth spotify hash" do
-    assert_equal @known, User.find_or_create_from_omniauth(@auth_hash)
-  end
+  # test "can find an existing user given an oauth spotify hash" do
+  #   assert_equal @known, User.find_or_create_from_omniauth(@auth_hash)
+  # end
 
   test "can make a new user given the oauth spotify hash of an unknown user" do
-    puts "user count is #{users.count}"
-    puts @unknown.inspect
     assert_difference 'User.count', 1 do
-      @user = User.find_or_create_from_omniauth(@unknown)
+      @user = User.find_or_create_from_omniauth(@adriana_auth_hash)
     end
   end
 

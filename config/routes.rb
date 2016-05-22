@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   get '/suggestions/favorites' => "suggestions#favorites"
   post '/suggestions/favorites' => "suggestions#favorite"
-  delete '/suggestions/favorites' => "suggestions#unfavorite"
+  delete 'suggestions/favorites/:suggestion_id' => "suggestions#unfavorite", as: :unfavorite
   #get '/users/:user_id/favorites' => "suggestions#favorites", as: :user_favorites
   # post '/users/:user_id/favorites' => "suggestions#favorite"
 

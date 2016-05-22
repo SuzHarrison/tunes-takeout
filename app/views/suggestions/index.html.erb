@@ -25,11 +25,12 @@
       </td>
       <td>
       <% if current_user && @favorites.include?(pairing["id"]) %>
-        <%= form_tag({controller: "suggestions", action: "unfavorite", method: "delete"}) do %>
-        <%= hidden_field_tag "unfavorite", pairing["id"] %>
-        <%= hidden_field_tag "current_user", current_user.uid %>
-        <%= submit_tag("Unfavorite") %>
-        <% end %>
+        <%= button_to "Unfavorite", unfavorite_path(pairing["id"]), method: "delete" %>
+        <%#= form_tag({controller: "suggestions", action: "unfavorite", method: "delete"}) do %>
+        <%#= hidden_field_tag "unfavorite", pairing["id"] %>
+        <%#= hidden_field_tag "current_user", current_user.uid %>
+        <%#= submit_tag("Unfavorite") %>
+        <%# end %>
       <% else %>
         <% if current_user %>
           <%= form_tag({controller: "suggestions", action: "favorite", method: "post"}) do %>

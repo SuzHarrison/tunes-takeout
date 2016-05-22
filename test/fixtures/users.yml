@@ -4,8 +4,13 @@
 # model remove the '{}' from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-#  column: value
+known_user:
+#"provider" => 'spotify', "info" => { "id" => "known_user", "display_name" => "known user"
+  provider: "spotify"
+  uid: "1226771573"
+  name: "Suzanne Convertino Harrison"
+
+unknown_user:
+  provider: ""
+  uid: ""
+  name: ""

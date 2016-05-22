@@ -29,7 +29,8 @@ class SuggestionsController < ApplicationController
 
   def unfavorite
     # removes a suggestion from the favorite list for the signed-in User. This requires interaction with the Tunes & Takeout API.
-    @favorite = TunesTakeoutWrapper.unfavorite(params["current_user"], params["unfavorite"])
+    user = current_user.uid
+    favorite = TunesTakeoutWrapper.unfavorite(user, params[:suggestion_id])
     redirect_to suggestions_favorites_path
   end
 

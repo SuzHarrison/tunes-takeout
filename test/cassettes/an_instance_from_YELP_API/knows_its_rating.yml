@@ -1,0 +1,90 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.yelp.com/v2/business/le-petit-cochon-seattle
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+      Authorization:
+      - OAuth oauth_consumer_key="MKgNpTNMT597GaPgrohIyA", oauth_nonce="b7208defa0f8d6e42e3bc8c0288e28fc",
+        oauth_signature="QocewuGkUhz9VI6AYgPPYG8z3nc%3D", oauth_signature_method="HMAC-SHA1",
+        oauth_timestamp="1463964373", oauth_token="sA6mZUpw8bENeVXU7hqIokcfc69HrIh6",
+        oauth_version="1.0"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 23 May 2016 00:46:13 GMT
+      Content-Type:
+      - application/json; charset=UTF-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d674171c40c462f5618ee6eb4f15f02b41463964373; expires=Tue, 23-May-17
+        00:46:13 GMT; path=/; domain=.yelp.com; HttpOnly
+      - bse=419202c873163f71d3cf986f63704340; Domain=.yelp.com; Path=/; HttpOnly
+      - yuv=i2Dsmz1IT5OnCo1pyYqDr9I0Q1faSjI2vN0yQEwS9KctMRUKEr1XkK7U6XBKGtYoDwIrKUjdDPkSP0lnoxMjzFIwuTvMTPfI;
+        Domain=.yelp.com; Max-Age=630720000; Path=/; expires=Sun, 18-May-2036 00:46:13
+        GMT
+      X-Node:
+      - api_com
+      - web105-r10-sfo2
+      Cache-Control:
+      - max-age=0, must-revalidate, no-cache, no-store, private
+      Expires:
+      - Mon, 23 May 2016 00:46:13 GMT
+      Pragma:
+      - no-cache
+      Vary:
+      - Accept-Encoding,User-Agent
+      X-Mode:
+      - ro
+      X-Proxied:
+      - extlb8-r11-sfo2
+      Server:
+      - cloudflare-nginx
+      Cf-Ray:
+      - 2a747d57ba662a8b-SEA
+    body:
+      encoding: ASCII-8BIT
+      string: '{"is_claimed": true, "rating": 4.0, "mobile_url": "http://m.yelp.com/biz/le-petit-cochon-seattle?utm_campaign=yelp_api\u0026utm_medium=api_v2_business\u0026utm_source=MKgNpTNMT597GaPgrohIyA",
+        "rating_img_url": "https://s3-media4.fl.yelpcdn.com/assets/2/www/img/c2f3dd9799a5/ico/stars/v1/stars_4.png",
+        "review_count": 95, "name": "Le Petit Cochon", "rating_img_url_small": "https://s3-media4.fl.yelpcdn.com/assets/2/www/img/f62a5be2f902/ico/stars/v1/stars_small_4.png",
+        "url": "http://www.yelp.com/biz/le-petit-cochon-seattle?utm_campaign=yelp_api\u0026utm_medium=api_v2_business\u0026utm_source=MKgNpTNMT597GaPgrohIyA",
+        "categories": [["American (New)", "newamerican"], ["Gastropubs", "gastropubs"],
+        ["Bars", "bars"]], "menu_date_updated": 1442172383, "reviews": [{"rating":
+        5, "excerpt": "Happy hour was delish. Although I was disappointed that the
+        duck Gizzards were not available, we enjoyed the Duck Feet, a totally new
+        experience for me and...", "time_created": 1458694595, "rating_image_url":
+        "https://s3-media1.fl.yelpcdn.com/assets/2/www/img/f1def11e4e79/ico/stars/v1/stars_5.png",
+        "rating_image_small_url": "https://s3-media1.fl.yelpcdn.com/assets/2/www/img/c7623205d5cd/ico/stars/v1/stars_small_5.png",
+        "user": {"image_url": "http://s3-media3.fl.yelpcdn.com/photo/-u62LaNCtKsyqe5RgylVsA/ms.jpg",
+        "id": "PoJ-W2rIXM8UZiv0Q8LPUQ", "name": "Brenda A."}, "rating_image_large_url":
+        "https://s3-media3.fl.yelpcdn.com/assets/2/www/img/22affc4e6c38/ico/stars/v1/stars_large_5.png",
+        "id": "POK6iF_9596JGHomGT8AIQ"}], "phone": "2068298943", "snippet_text": "Happy
+        hour was delish. Although I was disappointed that the duck Gizzards were not
+        available, we enjoyed the Duck Feet, a totally new experience for me and...",
+        "image_url": "https://s3-media1.fl.yelpcdn.com/bphoto/bKw52xkpFiXoOImoX0Enfw/ms.jpg",
+        "snippet_image_url": "http://s3-media3.fl.yelpcdn.com/photo/-u62LaNCtKsyqe5RgylVsA/ms.jpg",
+        "display_phone": "+1-206-829-8943", "rating_img_url_large": "https://s3-media2.fl.yelpcdn.com/assets/2/www/img/ccf2b76faa2c/ico/stars/v1/stars_large_4.png",
+        "menu_provider": "single_platform", "id": "le-petit-cochon-seattle", "is_closed":
+        false, "location": {"cross_streets": "N Fremont Ln", "city": "Seattle", "display_address":
+        ["701 N 36th St", "Ste 200", "Fremont", "Seattle, WA 98103"], "geo_accuracy":
+        9.5, "neighborhoods": ["Fremont"], "postal_code": "98103", "country_code":
+        "US", "address": ["701 N 36th St", "Ste 200"], "coordinate": {"latitude":
+        47.651066, "longitude": -122.349566}, "state_code": "WA"}}'
+    http_version: 
+  recorded_at: Mon, 23 May 2016 00:46:13 GMT
+recorded_with: VCR 3.0.1

@@ -10,7 +10,7 @@ known_user:
   uid: "1226771573"
   name: "Suzanne Convertino Harrison"
 
-# unknown_user:
-#   provider: "spotify"
-#   uid: "dri19tcc"
-#   name: "Adriana Cannon"
+unknown_user:
+  provider: "spotify"
+  uid: "1234"
+  name: "Adriana Smith"

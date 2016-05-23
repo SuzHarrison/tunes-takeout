@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://tunes-takeout-api.herokuapp.com/v1/suggestions/search?query=pizza
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 23 May 2016 02:12:06 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '2563'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"href":"https://tunes-takeout-api.herokuapp.com/v1/suggestions/search?query=pizza\u0026limit=20\u0026seed=pizza","suggestions":[{"id":"Vz3eIYve9AADSEwA","food_id":"meltdown-pizza-seattle","music_id":"1e70RG8LMwGZC5sdhfQ1vK","music_type":"artist"},{"id":"Vz3ecIve9AADSEwB","food_id":"mod-pizza-seattle-7","music_id":"1c8R0xZkfkFI03pc04cYAH","music_type":"artist"},{"id":"V0H6BlElJwADzF0D","food_id":"pizza-pro-seattle","music_id":"2BFLVopHH692mUdIdbevKT","music_type":"album"},{"id":"Vz3ecIve9AADSEwD","food_id":"napoli-pizzeria-seattle","music_id":"0hGTjyRqVvqtPEmLOkxOhY","music_type":"artist"},{"id":"V0H6BlElJwADzF0E","food_id":"pagliacci-pizza-seattle-5","music_id":"0tMQze9VMTK6T2eiJICSEN","music_type":"artist"},{"id":"Vz9XWPLW7wADpMms","food_id":"big-marios-new-york-style-pizza-seattle-3","music_id":"1v3H9kdWOqHviVqHYmDcKN","music_type":"track"},{"id":"Vz3ecIve9AADSEwG","food_id":"tutta-bella-neapolitan-pizzeria-seattle-10","music_id":"1HiOuFi7RiE7sq754rAO2J","music_type":"track"},{"id":"V0H6BlElJwADzF0F","food_id":"pizzeria-napoletana-seattle","music_id":"1mxxGIyw8XoolWxNAXCU8o","music_type":"track"},{"id":"Vz3ecIve9AADSEwI","food_id":"flying-squirrel-pizza-seattle-6","music_id":"0t0z31TXqlQzu75ogBIQFO","music_type":"artist"},{"id":"V0JmTd-lbgADKS9y","food_id":"serious-pie-seattle","music_id":"1qiiagJpJ2zaUSwZ6ZSWmL","music_type":"artist"},{"id":"Vz9XWPLW7wADpMmv","food_id":"bar-del-corso-seattle","music_id":"1yhekcwAz2jf0GRlS1rBjN","music_type":"track"},{"id":"V0H6BlElJwADzF0G","food_id":"post-alley-pizza-seattle","music_id":"0Etb74LImm3K8peHfWY4AG","music_type":"track"},{"id":"Vz45mu70YgADbIK5","food_id":"mioposto-bryant-seattle","music_id":"0kpXTLfYRNrmTLxAAx7YF4","music_type":"album"},{"id":"Vz45mu70YgADbIK6","food_id":"windy-city-pie-seattle","music_id":"0WGgc3DUBg8nkYU8hjdrw8","music_type":"album"},{"id":"Vz45mu70YgADbIK7","food_id":"flying-squirrel-pizza-seattle-5","music_id":"0OmhP2uTXLeTwn9VTZghxO","music_type":"track"},{"id":"Vz45mu70YgADbIK8","food_id":"the-woodlands-pizza-seattle","music_id":"0IYRwaA7d041CcyyigZl0v","music_type":"artist"},{"id":"Vz45mu70YgADbIK9","food_id":"world-pizza-seattle","music_id":"1cRba8zmbM3RGaCIUjOsNX","music_type":"track"},{"id":"Vz45mu70YgADbIK-","food_id":"the-diller-room-seattle","music_id":"0g6IybbskoG3zTuIIjBNBS","music_type":"album"},{"id":"Vz45mu70YgADbIK_","food_id":"stellar-pizza-and-ale-seattle","music_id":"1J6d8vrnXOB2iBo5IphJFX","music_type":"album"},{"id":"Vz45mu70YgADbILA","food_id":"central-pizza-seattle","music_id":"0ojKVJAkWSK762nYJcbjDC","music_type":"album"}]}'
+    http_version:
+  recorded_at: Mon, 23 May 2016 02:12:06 GMT
+- request:
+    method: get
+    uri: https://tunes-takeout-api.herokuapp.com/v1/suggestions/top?limit=20
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - Cowboy
+      Date:
+      - Mon, 23 May 2016 02:12:06 GMT
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      X-Content-Type-Options:
+      - nosniff
+      Content-Length:
+      - '474'
+      Via:
+      - 1.1 vegur
+    body:
+      encoding: UTF-8
+      string: '{"href":"https://tunes-takeout-api.herokuapp.com/v1/suggestions/top?limit=20","suggestions":["Vz0KQY-RRwADboE-","Vz0KO4-RRwADbn9t","Vz0KNY-RRwADbn29","Vz0KQY-RRwADboEQ","Vz0KO4-RRwADbn9f","Vz0KQY-RRwADboFP","Vz0KO4-RRwADbn9c","Vz0KO4-RRwADbn9Q","Vz0KQY-RRwADboEq","Vz0KQY-RRwADboFN","Vz0KO4-RRwADbn9d","Vz0KO4-RRwADbn9x","Vz0KO4-RRwADbn9V","Vz0KO4-RRwADbn8Z","Vz0KO4-RRwADbn8x","Vz0KO4-RRwADbn9I","Vz0KO4-RRwADbn9U","Vz0KO4-RRwADbn85","Vz0KNY-RRwADbn2n","Vz0KO4-RRwADbn9b"]}'
+    http_version:
+  recorded_at: Mon, 23 May 2016 02:12:06 GMT
+recorded_with: VCR 3.0.1

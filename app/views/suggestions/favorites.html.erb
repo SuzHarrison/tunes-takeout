@@ -19,7 +19,7 @@
       <% food_suggestion.location.each do |line| %>
         <address><%= line %>
           <% end %><br>
-      <abbr title="Phone">P:</abbr><%= food_suggestion.phone %></address>
+      <abbr title="Phone">P:</abbr><%= number_to_phone(food_suggestion.phone, area_code: true) %></address>
       <%= food_suggestion.rating %>:<%= image_tag food_suggestion.rating_img_url %>
     </td>
     <td>

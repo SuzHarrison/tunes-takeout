@@ -1,4 +1,4 @@
-require 'rspotify'
+#require 'rspotify'
 
 class Music
 attr_reader :music_suggestion
